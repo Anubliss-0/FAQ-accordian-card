@@ -6,6 +6,10 @@
   font-size: 100%;
 }
 
+html {
+  font-size: 15px;
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -18,19 +22,19 @@ body {
   align-items: center;
   overflow-x: hidden;
   font-family: "Kumbh Sans", sans-serif;
-  color: #1E1F36;
+  color: #1e1f36;
 }
 
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "hero-image text-area";
-  column-gap: 80px;
-  width: 920px;
-  height: 509px;
+  column-gap: 5.3333rem;
+  width: 61.3333rem;
+  min-height: 33.9333rem;
   background-color: #ffffff;
-  box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
-  border-radius: 23px;
+  box-shadow: 0px 3.3333rem 3.3333rem -1.3333rem rgba(53, 18, 122, 0.497159);
+  border-radius: 1.5333rem;
 }
 
 /* ------Hero image stuff here------ */
@@ -48,13 +52,13 @@ main {
 }
 
 .hero img:nth-of-type(1) {
-  right: 20px;
+  right: 1.3333rem;
   z-index: 1;
 }
 
 .hero img:nth-of-type(2) {
-  right: 20px;
-  bottom: -140px;
+  right: 1.3333rem;
+  bottom: -9.3333rem;
   z-index: 0;
 }
 
@@ -65,25 +69,25 @@ main {
 }
 
 .hero-box img {
-  left: -92px;
-  bottom: 115px;
+  left: -6.1333rem;
+  bottom: 7.6667rem;
   position: absolute;
 }
 
 .mobile-hero {
-  width: 237px;
-  height: 132px;
+  width: 15.8rem;
+  height: 8.8rem;
   position: relative;
   display: none;
 }
 
 .mobile-hero img {
   position: absolute;
-  top: -105px;
+  top: -7rem;
 }
 
 #shadow {
-  top: 0px;
+  top: 0rem;
 }
 
 /* ------Text stuff starts here------ */
@@ -96,57 +100,70 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 10%;
 }
 
 h1 {
   font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
-  margin-top: 65px;
-  margin-bottom: 17px;
+  font-size: 2.1333rem;
+  line-height: 2.6667rem;
+  margin-top: 4.3333rem;
+  margin-bottom: 1.1333rem;
+}
+
+button {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #E8E8EA;
+  padding: 1.2rem 0rem;
+  margin-right: 10%;
+  position: relative;
 }
 
 .q {
-  width: 350px;
-  height: 52px;
-  border-bottom: 1px solid #e8e8ea;
-  padding: 18px 0;
-  position: relative;
-  overflow: hidden;
+  text-align: left;
   transition: 0.5s;
 }
 
-h2 {
+span {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 0.9333rem;
+  line-height: 1.1333rem;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 
 p {
-  padding-top: 18px;
-  margin-bottom: 18px;
   overflow: hidden;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
   color: #787887;
+  display: none;
+  transition: 0.5s;
+  margin: 1rem 0rem;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.active p {
+  display: block;
 }
 
 .q img {
   display: inline-block;
   position: absolute;
-  right: 16px;
-  top: 24px;
+  right: 1.0667rem;
+  top: 1.6rem;
   transition: 0.5s;
 }
 
 /* ------classes for Javscript------ */
 .active {
-  height: 105px;
+  height: 100%;
 }
 
 .active .bold {
   font-weight: 700;
+  
 }
 
 .active .flipped {
@@ -155,9 +172,10 @@ p {
 
 /* ------Mobile Design------ */
 
-@media (max-width: 1015px) {
+@media (max-width: 67.6667rem) {
   main {
-    width: 327px;
+    min-width: 21.8rem;
+    margin: 0 5rem;
   }
 
   .hero {
@@ -171,7 +189,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 6.6667rem;
   }
 
   .mobile-hero {
@@ -180,19 +198,19 @@ p {
 
   h1 {
     text-align: center;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
   }
 
   .q {
-    width: 279px;
+    width: 18.6rem;
   }
 
   .q img {
-    right: 1px;
+    right: 0.0667rem;
   }
 
-  p {
-      padding-top: 16px;
+  span {
+    display: block;
   }
 }

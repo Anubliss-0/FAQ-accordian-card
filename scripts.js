@@ -9,7 +9,11 @@ function closeAll() {
 
 questionBoxes.forEach((answer) => {
   answer.addEventListener(`click`, function () {
-    closeAll();
-    this.classList.toggle(`active`);
+    if (this.classList.contains(`active`)) {
+      this.classList.remove(`active`);
+    } else {
+      closeAll();
+      this.classList.toggle(`active`);
+    }
   });
 });

@@ -16,7 +16,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: hidden;
   overflow-x: hidden;
   font-family: "Kumbh Sans", sans-serif;
 }
@@ -39,7 +38,6 @@ main {
   position: relative;
   display: flex;
   align-items: center;
-  border: 1px solid red;
   overflow: hidden;
   grid-area: hero-image;
 }
@@ -71,11 +69,26 @@ main {
   position: absolute;
 }
 
+.mobile-hero {
+  width: 237px;
+  height: 132px;
+  position: relative;
+  display: none;
+}
+
+.mobile-hero img {
+  position: absolute;
+  top: -105px;
+}
+
+#shadow {
+  top: 0px;
+}
+
 /* ------Text stuff starts here------ */
 
 .text {
   grid-area: text-area;
-  border: 1px solid red;
 }
 
 .questions {
@@ -110,6 +123,7 @@ h2 {
 
 p {
   padding-top: 18px;
+  margin-bottom: 18px;
   overflow: hidden;
   font-weight: 400;
   font-size: 12px;
@@ -122,9 +136,62 @@ p {
   position: absolute;
   right: 16px;
   top: 24px;
+  transition: 0.5s;
 }
 
 /* ------classes for Javscript------ */
 .active {
   height: 105px;
+}
+
+.active .bold {
+  font-weight: 700;
+}
+
+.active .flipped {
+  transform: rotate(0.5turn);
+}
+
+/* ------Mobile Design------ */
+
+@media (max-width: 1015px) {
+  main {
+    width: 327px;
+  }
+
+  .hero {
+    display: none;
+  }
+  .hero-box {
+    display: none;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  .mobile-hero {
+    display: block;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .q {
+    width: 279px;
+  }
+
+  .q img {
+    right: 1px;
+  }
+
+  p {
+      padding-top: 16px;
+  }
 }
